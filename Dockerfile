@@ -16,8 +16,6 @@ ENV PATH /root/.yarn/bin:$PATH
 RUN apk add --update nodejs=${NODE_VERSION} curl && \
   rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache curl
-
 ARG YARN_VERSION=1.3.2
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s -- --version ${YARN_VERSION}
